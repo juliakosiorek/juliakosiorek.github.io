@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Julia Kosiorek | Marketing Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #faf9f7;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      background-color: #ffffff;
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    nav h2 {
+      font-size: 22px;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #222;
+      font-size: 14px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #a45c72;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #f8e9ed, #faf9f7);
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero-tag {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 13px;
+      color: #a45c72;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: 64px;
+      margin-bottom: 15px;
+    }
+
+    .hero h2 {
+      font-size: 22px;
+      font-weight: normal;
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 18px;
+      color: #444;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 30px;
+      background-color: #222;
+      color: white;
+      padding: 13px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background-color: #a45c72;
+      transform: translateY(-2px);
+    }
+
+    /* GENERAL SECTIONS */
+
+    section {
+      padding: 90px 10%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title p {
+      color: #a45c72;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      margin-top: 5px;
+    }
+
+    /* ABOUT */
+
+    .about {
+      background-color: white;
+    }
+
+    .about-content {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about-content p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 45px;
+    }
+
+    .stat {
+      padding: 25px 10px;
+      background-color: #faf9f7;
+      border-radius: 12px;
+    }
+
+    .stat h3 {
+      font-size: 30px;
+      color: #a45c72;
+    }
+
+    .stat p {
+      font-size: 13px;
+      margin: 0;
+    }
+
+    /* SKILLS */
+
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .skill-card {
+      background-color: white;
+      padding: 35px;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      transition: 0.3s;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+    }
+
+    .skill-card h3 {
+      margin-bottom: 20px;
+      color: #a45c72;
+    }
+
+    .skill-card ul {
+      list-style: none;
+    }
+
+    .skill-card li {
+      padding: 7px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    /* PROJECTS */
+
+    .projects {
+      background-color: white;
+    }
+
+    .project-grid {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    .project-card {
+      background-color: #faf9f7;
+      padding: 35px;
+      border-radius: 14px;
+      border: 1px solid #eee;
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    }
+
+    .project-type {
+      color: #a45c72;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 11px;
+      font-weight: bold;
+    }
+
+    .project-card h3 {
+      font-size: 23px;
+      margin: 10px 0;
+    }
+
+    .project-card p {
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .project-card ul {
+      margin-left: 20px;
+      color: #555;
+    }
+
+    .project-card li {
+      margin-bottom: 8px;
+    }
+
+    /* EXPERIENCE */
+
+    .experience-container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .experience-item {
+      background-color: white;
+      padding: 30px;
+      margin-bottom: 25px;
+      border-left: 4px solid #a45c72;
+      border-radius: 8px;
+    }
+
+    .experience-item h3 {
+      font-size: 22px;
+    }
+
+    .experience-item h4 {
+      color: #a45c72;
+      margin-bottom: 5px;
+    }
+
+    .date {
+      font-size: 13px;
+      color: #777;
+      margin-bottom: 15px;
+    }
+
+    .experience-item ul {
+      margin-left: 20px;
+    }
+
+    .experience-item li {
+      margin-bottom: 8px;
+    }
+
+    /* EDUCATION */
+
+    .education {
+      background-color: white;
+    }
+
+    .education-card {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      background-color: #faf9f7;
+      padding: 45px;
+      border-radius: 14px;
+    }
+
+    .education-card h3 {
+      font-size: 27px;
+    }
+
+    .education-card h4 {
+      color: #a45c72;
+      margin: 8px 0;
+    }
+
+    .education-card p {
+      margin: 8px;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      text-align: center;
+      background-color: #222;
+      color: white;
+    }
+
+    .contact h2 {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .contact p {
+      color: #ddd;
+      margin-bottom: 8px;
+    }
+
+    .contact a {
+      color: #f3cbd6;
+      text-decoration: none;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background-color: #171717;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      nav ul {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 44px;
+      }
+
+      .skills-container,
+      .project-grid,
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 70px 7%;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+    <h2>JK.</h2>
+
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- HERO -->
+
+  <header class="hero">
+
+    <div class="hero-content">
+
+      <div class="hero-tag">
+        Marketing • Branding • Consumer Strategy
+      </div>
+
+      <h1>Julia Kosiorek</h1>
+
+      <h2>
+        Rutgers University Marketing Student
+      </h2>
+
+      <!-- PERSONAL STATEMENT REQUIRED BY ASSIGNMENT -->
+
+      <p>
+        Marketing student at Rutgers University combining creative brand
+        storytelling, consumer insights, and digital strategy to build
+        meaningful connections between brands and consumers.
+      </p>
+
+      <a href="#projects" class="button">
+        View My Work
+      </a>
+
+    </div>
+
+  </header>
+
+
+  <!-- ABOUT -->
+
+  <section id="about" class="about">
+
+    <div class="section-title">
+      <p>Get to know me</p>
+      <h2>About Me</h2>
+    </div>
+
+    <div class="about-content">
+
+      <p>
+        I am a marketing student at Rutgers University with a strong interest
+        in beauty, fashion, retail, digital marketing, and consumer behavior.
+        I enjoy understanding what motivates consumers and translating those
+        insights into creative marketing strategies.
+      </p>
+
+      <p>
+        My experience includes building my own Etsy brand from the ground up,
+        developing social media strategies, creating content, working directly
+        with customers, and completing marketing projects focused on brand
+        strategy and consumer adoption.
+      </p>
+
+      <p>
+        I am currently seeking a Summer 2027 marketing internship where I can
+        contribute creativity, analytical thinking, and a consumer-focused
+        perspective.
+      </p>
+
+      <div class="stats">
+
+        <div class="stat">
+          <h3>3.87</h3>
+          <p>GPA</p>
+        </div>
+
+        <div class="stat">
+          <h3>6K+</h3>
+          <p>Organic Followers</p>
+        </div>
+
+        <div class="stat">
+          <h3>250+</h3>
+          <p>Etsy Sales</p>
+        </div>
+
+        <div class="stat">
+          <h3>2028</h3>
+          <p>Expected Graduation</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SKILLS -->
+
+  <section id="skills">
+
+    <div class="section-title">
+      <p>What I bring</p>
+      <h2>Skills</h2>
+    </div>
+
+    <div class="skills-container">
+
+      <div class="skill-card">
+
+        <h3>Marketing</h3>
+
+        <ul>
+          <li>Social Media Marketing</li>
+          <li>Content Creation</li>
+          <li>Brand Storytelling</li>
+          <li>Consumer Engagement</li>
+          <li>Marketing Strategy</li>
+          <li>Event Planning</li>
+          <li>Data Analysis</li>
+        </ul>
+
+      </div>
+
+
+      <div class="skill-card">
+
+        <h3>Technical</h3>
+
+        <ul>
+          <li>Microsoft Excel</li>
+          <li>Microsoft PowerPoint</li>
+          <li>Microsoft Word</li>
+          <li>Canva</li>
+          <li>HTML</li>
+          <li>JavaScript</li>
+        </ul>
+
+      </div>
+
+
+      <div class="skill-card">
+
+        <h3>Professional</h3>
+
+        <ul>
+          <li>Customer Service</li>
+          <li>Team Collaboration</li>
+          <li>Communication</li>
+          <li>Multitasking</li>
+          <li>Consumer-Focused Thinking</li>
+          <li>English — Native/Bilingual</li>
+          <li>Polish — Professional Proficiency</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PROJECTS -->
+
+  <section id="projects" class="projects">
+
+    <div class="section-title">
+      <p>Selected work</p>
+      <h2>Marketing Projects</h2>
+    </div>
+
+    <div class="project-grid">
+
+
+      <!-- PROJECT 1 -->
+
+      <div class="project-card">
+
+        <div class="project-type">
+          Consumer Behavior
+        </div>
+
+        <h3>Voltra I Innovation Analysis</h3>
+
+        <p>
+          Rutgers University | Spring 2026
+        </p>
+
+        <ul>
+          <li>
+            Analyzed Voltra I as a discontinuous innovation using key
+            consumer adoption characteristics.
+          </li>
+
+          <li>
+            Evaluated relative advantage, compatibility, complexity,
+            trialability, and observability.
+          </li>
+
+          <li>
+            Developed recommendations involving social media,
+            demonstrations, tutorials, and free trials.
+          </li>
+
+          <li>
+            Evaluated functional and hedonic consumer benefits including
+            portability, customization, and performance tracking.
+          </li>
+        </ul>
+
+      </div>
+
+
+      <!-- PROJECT 2 -->
+
+      <div class="project-card">
+
+        <div class="project-type">
+          Marketing Strategy
+        </div>
+
+        <h3>Red Bull Marketing Pitch</h3>
+
+        <p>
+          Rutgers University | Fall 2025
+        </p>
+
+        <ul>
+
+          <li>
+            Developed a Q4 marketing strategy for Red Bull Winter Gift
+            Bundles featuring seasonal flavors, merchandise, and
+            holiday packaging.
+          </li>
+
+          <li>
+            Conducted competitor and brand analysis, a consumer survey,
+            SWOT analysis, and buyer persona development.
+          </li>
+
+          <li>
+            Applied the marketing mix to identify growth opportunities.
+          </li>
+
+          <li>
+            Proposed social media and viral advertising tactics designed
+            to increase holiday sales and consumer engagement.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- PROJECT 3 -->
+
+      <div class="project-card">
+
+        <div class="project-type">
+          Entrepreneurship & Digital Marketing
+        </div>
+
+        <h3>Etsy Brand Development</h3>
+
+        <p>
+          Independent Business Project | 2021–2022
+        </p>
+
+        <ul>
+
+          <li>
+            Built and managed an independent handmade jewelry brand.
+          </li>
+
+          <li>
+            Grew an organic social media audience to more than
+            6,000 followers.
+          </li>
+
+          <li>
+            Generated more than 250 product sales.
+          </li>
+
+          <li>
+            Used content strategy, brand storytelling, and personalized
+            customer engagement to grow the business.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- PROJECT 4 -->
+
+      <div class="project-card">
+
+        <div class="project-type">
+          Portfolio Development
+        </div>
+
+        <h3>Personal Marketing Portfolio</h3>
+
+        <p>
+          Rutgers Business School | 2026
+        </p>
+
+        <ul>
+
+          <li>
+            Designed and developed this professional portfolio website.
+          </li>
+
+          <li>
+            Used HTML and CSS to create a responsive personal brand
+            experience.
+          </li>
+
+          <li>
+            Organized academic projects, skills, and professional
+            experience for potential employers.
+          </li>
+
+          <li>
+            Applied principles of branding, visual hierarchy, and
+            user experience.
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- EXPERIENCE -->
+
+  <section id="experience">
+
+    <div class="section-title">
+      <p>Professional background</p>
+      <h2>Experience</h2>
+    </div>
+
+    <div class="experience-container">
+
+
+      <div class="experience-item">
+
+        <h3>Shop Owner</h3>
+
+        <h4>Etsy Shop</h4>
+
+        <div class="date">
+          March 2021 – July 2022 | Somerset, NJ
+        </div>
+
+        <ul>
+
+          <li>
+            Developed and executed a social media content strategy,
+            growing an organic following of over 6,000.
+          </li>
+
+          <li>
+            Designed and listed handmade clay jewelry, generating
+            more than 250 sales.
+          </li>
+
+          <li>
+            Used targeted brand storytelling and audience engagement
+            to promote products.
+          </li>
+
+          <li>
+            Strengthened customer relationships through personalized
+            and timely communication.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="experience-item">
+
+        <h3>Restaurant Hostess</h3>
+
+        <h4>Stage House Tavern</h4>
+
+        <div class="date">
+          February 2024 – Present | Somerset, NJ
+        </div>
+
+        <ul>
+
+          <li>
+            Welcome and seat guests while creating a positive first
+            impression and seamless dining experience.
+          </li>
+
+          <li>
+            Train and onboard new host staff.
+          </li>
+
+          <li>
+            Collaborate with team members to maintain high service
+            standards.
+          </li>
+
+          <li>
+            Manage reservation systems and coordinate event bookings
+            to support front-of-house operations.
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- EDUCATION -->
+
+  <section id="education" class="education">
+
+    <div class="section-title">
+      <p>Academic background</p>
+      <h2>Education</h2>
+    </div>
+
+    <div class="education-card">
+
+      <h3>Rutgers University</h3>
+
+      <h4>Bachelor of Science in Marketing</h4>
+
+      <p>Rutgers Business School | New Brunswick, NJ</p>
+
+      <p><strong>GPA:</strong> 3.87</p>
+
+      <p>
+        <strong>Expected Graduation:</strong> May 2028
+      </p>
+
+      <p>
+        Dean's List — Fall 2024 through Spring 2026
+      </p>
+
+      <p>
+        Dean's Scholarship Recipient
+      </p>
+
+      <p>
+        Rutgers Honors College Member
+      </p>
+
+      <br>
+
+      <p>
+        <strong>Activities:</strong>
+        Fashion Organization of Retail & Marketing (FORM),
+        Rutgers Undergraduate Women in Business,
+        Rutgers Polish Club, and Rutgers Intramural Sports.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section id="contact" class="contact">
+
+    <h2>Let's Connect</h2>
+
+    <p>
+      I'm currently seeking Summer 2027 marketing internship opportunities.
+    </p>
+
+    <br>
+
+    <p>
+      Somerset, New Jersey
+    </p>
+
+    <p>
+      <a href="mailto:juliakos789@gmail.com">
+        juliakos789@gmail.com
+      </a>
+    </p>
+
+    <p>
+      732-789-9093
+    </p>
+
+    <!-- ADD YOUR LINKEDIN URL BELOW WHEN YOU HAVE IT -->
+
+    <!--
+    <p>
+      <a href="YOUR-LINKEDIN-URL" target="_blank">
+        LinkedIn
+      </a>
+    </p>
+    -->
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2026 Julia Kosiorek | Marketing Portfolio
+    </p>
+
+  </footer>
+
+
+  <!-- SIMPLE JAVASCRIPT -->
+
+  <script>
+
+    // Smooth scrolling for navigation links
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+      anchor.addEventListener("click", function(e) {
+
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute("href"))
+          .scrollIntoView({
+            behavior: "smooth"
+          });
+
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>
