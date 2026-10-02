@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,11 @@
   <title>Julia Kosiorek | Marketing Portfolio</title>
 
   <style>
+
+    /* =========================
+       GENERAL
+    ========================== */
+
     * {
       margin: 0;
       padding: 0;
@@ -20,106 +26,6 @@
       color: #222;
       line-height: 1.6;
     }
-
-    /* NAVIGATION */
-
-    nav {
-      background-color: #ffffff;
-      padding: 18px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      border-bottom: 1px solid #e8e8e8;
-    }
-
-    nav h2 {
-      font-size: 22px;
-      letter-spacing: 1px;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 28px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #222;
-      font-size: 14px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: #a45c72;
-    }
-
-    /* HERO */
-
-    .hero {
-      min-height: 88vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 80px 20px;
-      background: linear-gradient(135deg, #f8e9ed, #faf9f7);
-    }
-
-    .hero-content {
-      max-width: 850px;
-    }
-
-    .hero-tag {
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 13px;
-      color: #a45c72;
-      font-weight: bold;
-      margin-bottom: 18px;
-    }
-
-    .hero h1 {
-      font-size: 64px;
-      margin-bottom: 15px;
-    }
-
-    .hero h2 {
-      font-size: 22px;
-      font-weight: normal;
-      color: #555;
-      margin-bottom: 25px;
-    }
-
-    .hero p {
-      max-width: 700px;
-      margin: auto;
-      font-size: 18px;
-      color: #444;
-    }
-
-    .button {
-      display: inline-block;
-      margin-top: 30px;
-      background-color: #222;
-      color: white;
-      padding: 13px 28px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-size: 14px;
-      transition: 0.3s;
-    }
-
-    .button:hover {
-      background-color: #a45c72;
-      transform: translateY(-2px);
-    }
-
-    /* GENERAL SECTIONS */
 
     section {
       padding: 90px 10%;
@@ -143,7 +49,159 @@
       margin-top: 5px;
     }
 
-    /* ABOUT */
+
+    /* =========================
+       NAVIGATION
+    ========================== */
+
+    nav {
+      background-color: rgba(255, 255, 255, 0.96);
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: #222;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #222;
+      font-size: 14px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #a45c72;
+    }
+
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 10%;
+      background: linear-gradient(135deg, #f7e5ea, #faf9f7);
+    }
+
+    .hero-container {
+      width: 100%;
+      max-width: 1150px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 70px;
+    }
+
+    .hero-content {
+      flex: 1;
+      max-width: 650px;
+    }
+
+    .hero-tag {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 13px;
+      color: #a45c72;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: 64px;
+      line-height: 1.05;
+      margin-bottom: 15px;
+    }
+
+    .hero h2 {
+      font-size: 22px;
+      font-weight: normal;
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #444;
+      line-height: 1.7;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #222;
+      color: white;
+      padding: 13px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background-color: #a45c72;
+      transform: translateY(-2px);
+    }
+
+    .button-secondary {
+      background-color: transparent;
+      color: #222;
+      border: 1px solid #222;
+    }
+
+    .button-secondary:hover {
+      color: white;
+      border-color: #a45c72;
+    }
+
+
+    /* HEADSHOT */
+
+    .hero-photo {
+      flex-shrink: 0;
+    }
+
+    .hero-photo img {
+      width: 330px;
+      height: 330px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 28%;
+      border: 8px solid white;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================== */
 
     .about {
       background-color: white;
@@ -160,6 +218,9 @@
       color: #555;
       margin-bottom: 20px;
     }
+
+
+    /* STATS */
 
     .stats {
       display: grid;
@@ -182,9 +243,13 @@
     .stat p {
       font-size: 13px;
       margin: 0;
+      color: #555;
     }
 
-    /* SKILLS */
+
+    /* =========================
+       SKILLS
+    ========================== */
 
     .skills-container {
       display: grid;
@@ -204,12 +269,13 @@
 
     .skill-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
     }
 
     .skill-card h3 {
       margin-bottom: 20px;
       color: #a45c72;
+      font-size: 22px;
     }
 
     .skill-card ul {
@@ -217,11 +283,14 @@
     }
 
     .skill-card li {
-      padding: 7px 0;
+      padding: 8px 0;
       border-bottom: 1px solid #eee;
     }
 
-    /* PROJECTS */
+
+    /* =========================
+       PROJECTS
+    ========================== */
 
     .projects {
       background-color: white;
@@ -245,7 +314,7 @@
 
     .project-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
     }
 
     .project-type {
@@ -262,8 +331,9 @@
     }
 
     .project-card p {
-      color: #555;
+      color: #777;
       margin-bottom: 15px;
+      font-size: 14px;
     }
 
     .project-card ul {
@@ -272,10 +342,13 @@
     }
 
     .project-card li {
-      margin-bottom: 8px;
+      margin-bottom: 9px;
     }
 
-    /* EXPERIENCE */
+
+    /* =========================
+       EXPERIENCE
+    ========================== */
 
     .experience-container {
       max-width: 900px;
@@ -288,6 +361,7 @@
       margin-bottom: 25px;
       border-left: 4px solid #a45c72;
       border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
     }
 
     .experience-item h3 {
@@ -313,7 +387,10 @@
       margin-bottom: 8px;
     }
 
-    /* EDUCATION */
+
+    /* =========================
+       EDUCATION
+    ========================== */
 
     .education {
       background-color: white;
@@ -326,22 +403,58 @@
       background-color: #faf9f7;
       padding: 45px;
       border-radius: 14px;
+      border: 1px solid #eee;
     }
 
     .education-card h3 {
-      font-size: 27px;
+      font-size: 28px;
     }
 
     .education-card h4 {
       color: #a45c72;
-      margin: 8px 0;
+      margin: 8px 0 18px;
+      font-size: 19px;
     }
 
     .education-card p {
       margin: 8px;
     }
 
-    /* CONTACT */
+
+    /* =========================
+       ACTIVITIES
+    ========================== */
+
+    .activities-container {
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .activity-card {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      border: 1px solid #eee;
+    }
+
+    .activity-card h3 {
+      color: #a45c72;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .activity-card p {
+      color: #555;
+      font-size: 14px;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================== */
 
     .contact {
       text-align: center;
@@ -354,9 +467,19 @@
       margin-bottom: 15px;
     }
 
-    .contact p {
+    .contact-intro {
       color: #ddd;
-      margin-bottom: 8px;
+      max-width: 600px;
+      margin: 0 auto 25px;
+    }
+
+    .contact-info {
+      margin-top: 20px;
+    }
+
+    .contact-info p {
+      margin: 7px 0;
+      color: #ddd;
     }
 
     .contact a {
@@ -364,7 +487,14 @@
       text-decoration: none;
     }
 
-    /* FOOTER */
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================== */
 
     footer {
       background-color: #171717;
@@ -374,21 +504,44 @@
       font-size: 12px;
     }
 
-    /* MOBILE */
 
-    @media (max-width: 800px) {
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 850px) {
 
       nav ul {
         display: none;
+      }
+
+      .hero {
+        padding-top: 60px;
+      }
+
+      .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 35px;
       }
 
       .hero h1 {
         font-size: 44px;
       }
 
+      .hero-photo img {
+        width: 230px;
+        height: 230px;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
       .skills-container,
       .project-grid,
-      .stats {
+      .stats,
+      .activities-container {
         grid-template-columns: 1fr;
       }
 
@@ -400,12 +553,19 @@
   </style>
 </head>
 
+
 <body>
 
-  <!-- NAVIGATION -->
+
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
 
   <nav>
-    <h2>JK.</h2>
+
+    <div class="logo">
+      JK.
+    </div>
 
     <ul>
       <li><a href="#about">About</a></li>
@@ -415,43 +575,74 @@
       <li><a href="#education">Education</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+
   </nav>
 
 
-  <!-- HERO -->
+  <!-- =========================
+       HERO
+  ========================== -->
 
   <header class="hero">
 
-    <div class="hero-content">
+    <div class="hero-container">
 
-      <div class="hero-tag">
-        Marketing • Branding • Consumer Strategy
+      <div class="hero-content">
+
+        <div class="hero-tag">
+          Marketing • Branding • Consumer Strategy
+        </div>
+
+        <h1>
+          Julia Kosiorek
+        </h1>
+
+        <h2>
+          Rutgers University Marketing Student
+        </h2>
+
+        <!-- PERSONAL STATEMENT -->
+
+        <p>
+          Marketing student at Rutgers University combining creative brand
+          storytelling, consumer insights, and digital strategy to build
+          meaningful connections between brands and consumers.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#projects" class="button">
+            View My Work
+          </a>
+
+          <a href="#contact" class="button button-secondary">
+            Contact Me
+          </a>
+
+        </div>
+
       </div>
 
-      <h1>Julia Kosiorek</h1>
 
-      <h2>
-        Rutgers University Marketing Student
-      </h2>
+      <!-- HEADSHOT -->
 
-      <!-- PERSONAL STATEMENT REQUIRED BY ASSIGNMENT -->
+      <div class="hero-photo">
 
-      <p>
-        Marketing student at Rutgers University combining creative brand
-        storytelling, consumer insights, and digital strategy to build
-        meaningful connections between brands and consumers.
-      </p>
+        <img
+          src="headshot.jpeg"
+          alt="Professional headshot of Julia Kosiorek"
+        >
 
-      <a href="#projects" class="button">
-        View My Work
-      </a>
+      </div>
 
     </div>
 
   </header>
 
 
-  <!-- ABOUT -->
+  <!-- =========================
+       ABOUT
+  ========================== -->
 
   <section id="about" class="about">
 
@@ -465,22 +656,23 @@
       <p>
         I am a marketing student at Rutgers University with a strong interest
         in beauty, fashion, retail, digital marketing, and consumer behavior.
-        I enjoy understanding what motivates consumers and translating those
-        insights into creative marketing strategies.
+        I am especially interested in understanding what motivates consumers
+        and translating those insights into creative marketing strategies.
       </p>
 
       <p>
         My experience includes building my own Etsy brand from the ground up,
-        developing social media strategies, creating content, working directly
-        with customers, and completing marketing projects focused on brand
-        strategy and consumer adoption.
+        developing social media strategies, creating content, communicating
+        directly with customers, and completing marketing projects focused
+        on brand strategy, consumer behavior, and product adoption.
       </p>
 
       <p>
         I am currently seeking a Summer 2027 marketing internship where I can
         contribute creativity, analytical thinking, and a consumer-focused
-        perspective.
+        perspective while continuing to develop my professional experience.
       </p>
+
 
       <div class="stats">
 
@@ -511,16 +703,22 @@
   </section>
 
 
-  <!-- SKILLS -->
+  <!-- =========================
+       SKILLS
+  ========================== -->
 
   <section id="skills">
 
     <div class="section-title">
-      <p>What I bring</p>
+      <p>What I Bring</p>
       <h2>Skills</h2>
     </div>
 
+
     <div class="skills-container">
+
+
+      <!-- MARKETING SKILLS -->
 
       <div class="skill-card">
 
@@ -539,6 +737,8 @@
       </div>
 
 
+      <!-- TECHNICAL SKILLS -->
+
       <div class="skill-card">
 
         <h3>Technical</h3>
@@ -554,6 +754,8 @@
 
       </div>
 
+
+      <!-- PROFESSIONAL SKILLS -->
 
       <div class="skill-card">
 
@@ -576,14 +778,17 @@
   </section>
 
 
-  <!-- PROJECTS -->
+  <!-- =========================
+       PROJECTS
+  ========================== -->
 
   <section id="projects" class="projects">
 
     <div class="section-title">
-      <p>Selected work</p>
+      <p>Selected Work</p>
       <h2>Marketing Projects</h2>
     </div>
+
 
     <div class="project-grid">
 
@@ -596,32 +801,36 @@
           Consumer Behavior
         </div>
 
-        <h3>Voltra I Innovation Analysis</h3>
+        <h3>
+          Voltra I Innovation Analysis
+        </h3>
 
         <p>
           Rutgers University | Spring 2026
         </p>
 
         <ul>
+
           <li>
             Analyzed Voltra I as a discontinuous innovation using key
             consumer adoption characteristics.
           </li>
 
           <li>
-            Evaluated relative advantage, compatibility, complexity,
+            Evaluated its relative advantage, compatibility, complexity,
             trialability, and observability.
           </li>
 
           <li>
-            Developed recommendations involving social media,
-            demonstrations, tutorials, and free trials.
+            Developed marketing recommendations involving social media,
+            product demonstrations, tutorials, and free trials.
           </li>
 
           <li>
-            Evaluated functional and hedonic consumer benefits including
-            portability, customization, and performance tracking.
+            Evaluated functional and hedonic benefits including portability,
+            workout customization, and performance tracking.
           </li>
+
         </ul>
 
       </div>
@@ -635,7 +844,9 @@
           Marketing Strategy
         </div>
 
-        <h3>Red Bull Marketing Pitch</h3>
+        <h3>
+          Red Bull Marketing Pitch
+        </h3>
 
         <p>
           Rutgers University | Fall 2025
@@ -645,8 +856,8 @@
 
           <li>
             Developed a Q4 marketing strategy for Red Bull Winter Gift
-            Bundles featuring seasonal flavors, merchandise, and
-            holiday packaging.
+            Bundles incorporating seasonal flavors, holiday packaging,
+            and merchandise.
           </li>
 
           <li>
@@ -655,12 +866,13 @@
           </li>
 
           <li>
-            Applied the marketing mix to identify growth opportunities.
+            Applied the marketing mix to identify potential growth
+            opportunities.
           </li>
 
           <li>
             Proposed social media and viral advertising tactics designed
-            to increase holiday sales and consumer engagement.
+            to increase holiday sales, engagement, and consumer interest.
           </li>
 
         </ul>
@@ -676,21 +888,23 @@
           Entrepreneurship & Digital Marketing
         </div>
 
-        <h3>Etsy Brand Development</h3>
+        <h3>
+          Etsy Brand Development
+        </h3>
 
         <p>
-          Independent Business Project | 2021–2022
+          Independent Business | 2021–2022
         </p>
 
         <ul>
 
           <li>
-            Built and managed an independent handmade jewelry brand.
+            Built and managed an independent handmade clay jewelry brand.
           </li>
 
           <li>
-            Grew an organic social media audience to more than
-            6,000 followers.
+            Developed a social media content strategy that grew an organic
+            audience to more than 6,000 followers.
           </li>
 
           <li>
@@ -698,7 +912,7 @@
           </li>
 
           <li>
-            Used content strategy, brand storytelling, and personalized
+            Used content creation, brand storytelling, and personalized
             customer engagement to grow the business.
           </li>
 
@@ -712,10 +926,12 @@
       <div class="project-card">
 
         <div class="project-type">
-          Portfolio Development
+          Web Design & Personal Branding
         </div>
 
-        <h3>Personal Marketing Portfolio</h3>
+        <h3>
+          Professional Marketing Portfolio
+        </h3>
 
         <p>
           Rutgers Business School | 2026
@@ -733,41 +949,51 @@
           </li>
 
           <li>
-            Organized academic projects, skills, and professional
+            Organized academic projects, skills, education, and professional
             experience for potential employers.
           </li>
 
           <li>
-            Applied principles of branding, visual hierarchy, and
-            user experience.
+            Applied branding, visual hierarchy, and user experience
+            principles throughout the website.
           </li>
 
         </ul>
 
       </div>
 
+
     </div>
 
   </section>
 
 
-  <!-- EXPERIENCE -->
+  <!-- =========================
+       EXPERIENCE
+  ========================== -->
 
   <section id="experience">
 
     <div class="section-title">
-      <p>Professional background</p>
+      <p>Professional Background</p>
       <h2>Experience</h2>
     </div>
+
 
     <div class="experience-container">
 
 
+      <!-- ETSY -->
+
       <div class="experience-item">
 
-        <h3>Shop Owner</h3>
+        <h3>
+          Shop Owner
+        </h3>
 
-        <h4>Etsy Shop</h4>
+        <h4>
+          Etsy Shop
+        </h4>
 
         <div class="date">
           March 2021 – July 2022 | Somerset, NJ
@@ -777,22 +1003,18 @@
 
           <li>
             Developed and executed a social media content strategy,
-            growing an organic following of over 6,000.
+            growing an organic following of over 6,000 across platforms.
           </li>
 
           <li>
             Designed and listed handmade clay jewelry, generating
-            more than 250 sales.
+            more than 250 sales through targeted brand storytelling
+            and audience engagement.
           </li>
 
           <li>
-            Used targeted brand storytelling and audience engagement
-            to promote products.
-          </li>
-
-          <li>
-            Strengthened customer relationships through personalized
-            and timely communication.
+            Strengthened customer retention by responding to inquiries
+            with personalized and timely messaging.
           </li>
 
         </ul>
@@ -800,11 +1022,17 @@
       </div>
 
 
+      <!-- STAGE HOUSE -->
+
       <div class="experience-item">
 
-        <h3>Restaurant Hostess</h3>
+        <h3>
+          Restaurant Hostess
+        </h3>
 
-        <h4>Stage House Tavern</h4>
+        <h4>
+          Stage House Tavern
+        </h4>
 
         <div class="date">
           February 2024 – Present | Somerset, NJ
@@ -813,54 +1041,62 @@
         <ul>
 
           <li>
-            Welcome and seat guests while creating a positive first
-            impression and seamless dining experience.
+            Welcome and seat guests while establishing a positive first
+            impression and ensuring a seamless dining experience.
           </li>
 
           <li>
-            Train and onboard new host staff.
-          </li>
-
-          <li>
-            Collaborate with team members to maintain high service
-            standards.
+            Train and onboard new host staff while collaborating with
+            the team to maintain strong service standards.
           </li>
 
           <li>
             Manage reservation systems and coordinate event bookings
-            to support front-of-house operations.
+            to maintain efficient front-of-house operations.
           </li>
 
         </ul>
 
       </div>
 
+
     </div>
 
   </section>
 
 
-  <!-- EDUCATION -->
+  <!-- =========================
+       EDUCATION
+  ========================== -->
 
   <section id="education" class="education">
 
     <div class="section-title">
-      <p>Academic background</p>
+      <p>Academic Background</p>
       <h2>Education</h2>
     </div>
 
+
     <div class="education-card">
 
-      <h3>Rutgers University</h3>
+      <h3>
+        Rutgers University
+      </h3>
 
-      <h4>Bachelor of Science in Marketing</h4>
+      <h4>
+        Bachelor of Science in Marketing
+      </h4>
 
-      <p>Rutgers Business School | New Brunswick, NJ</p>
-
-      <p><strong>GPA:</strong> 3.87</p>
+      <p>
+        Rutgers Business School | New Brunswick, New Jersey
+      </p>
 
       <p>
         <strong>Expected Graduation:</strong> May 2028
+      </p>
+
+      <p>
+        <strong>GPA:</strong> 3.87
       </p>
 
       <p>
@@ -875,60 +1111,136 @@
         Rutgers Honors College Member
       </p>
 
-      <br>
+    </div>
 
-      <p>
-        <strong>Activities:</strong>
-        Fashion Organization of Retail & Marketing (FORM),
-        Rutgers Undergraduate Women in Business,
-        Rutgers Polish Club, and Rutgers Intramural Sports.
-      </p>
+  </section>
+
+
+  <!-- =========================
+       ACTIVITIES
+  ========================== -->
+
+  <section id="activities">
+
+    <div class="section-title">
+      <p>Campus Involvement</p>
+      <h2>Activities & Leadership</h2>
+    </div>
+
+
+    <div class="activities-container">
+
+
+      <div class="activity-card">
+
+        <h3>
+          Fashion Organization of Retail & Marketing
+        </h3>
+
+        <p>
+          Participate in industry-focused events and programming centered
+          on retail and marketing careers in the fashion sector.
+        </p>
+
+      </div>
+
+
+      <div class="activity-card">
+
+        <h3>
+          Rutgers Undergraduate Women in Business
+        </h3>
+
+        <p>
+          Participate in professional development workshops and networking
+          events for women pursuing careers in business.
+        </p>
+
+      </div>
+
+
+      <div class="activity-card">
+
+        <h3>
+          Rutgers Polish Club
+        </h3>
+
+        <p>
+          Contribute to cultural events and community programming
+          celebrating Polish heritage.
+        </p>
+
+      </div>
+
+
+      <div class="activity-card">
+
+        <h3>
+          Rutgers Intramural Sports
+        </h3>
+
+        <p>
+          Compete in intramural soccer and volleyball leagues.
+        </p>
+
+      </div>
+
 
     </div>
 
   </section>
 
 
-  <!-- CONTACT -->
+  <!-- =========================
+       CONTACT
+  ========================== -->
 
   <section id="contact" class="contact">
 
-    <h2>Let's Connect</h2>
+    <h2>
+      Let's Connect
+    </h2>
 
-    <p>
-      I'm currently seeking Summer 2027 marketing internship opportunities.
+    <p class="contact-intro">
+      I'm currently seeking Summer 2027 marketing internship opportunities
+      in beauty, fashion, retail, digital marketing, and related industries.
     </p>
 
-    <br>
 
-    <p>
-      Somerset, New Jersey
-    </p>
+    <div class="contact-info">
 
-    <p>
-      <a href="mailto:juliakos789@gmail.com">
-        juliakos789@gmail.com
-      </a>
-    </p>
+      <p>
+        Somerset, New Jersey
+      </p>
 
-    <p>
-      732-789-9093
-    </p>
+      <p>
+        <a href="mailto:juliakos789@gmail.com">
+          juliakos789@gmail.com
+        </a>
+      </p>
 
-    <!-- ADD YOUR LINKEDIN URL BELOW WHEN YOU HAVE IT -->
+      <p>
+        732-789-9093
+      </p>
 
-    <!--
-    <p>
-      <a href="YOUR-LINKEDIN-URL" target="_blank">
-        LinkedIn
-      </a>
-    </p>
-    -->
+      <!--
+      ADD YOUR LINKEDIN HERE LATER:
+
+      <p>
+        <a href="YOUR-LINKEDIN-LINK" target="_blank">
+          LinkedIn
+        </a>
+      </p>
+      -->
+
+    </div>
 
   </section>
 
 
-  <!-- FOOTER -->
+  <!-- =========================
+       FOOTER
+  ========================== -->
 
   <footer>
 
@@ -939,11 +1251,13 @@
   </footer>
 
 
-  <!-- SIMPLE JAVASCRIPT -->
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
 
   <script>
 
-    // Smooth scrolling for navigation links
+    // Smooth scrolling when navigation links are clicked
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
@@ -951,10 +1265,17 @@
 
         e.preventDefault();
 
-        document.querySelector(this.getAttribute("href"))
-          .scrollIntoView({
+        const target = document.querySelector(
+          this.getAttribute("href")
+        );
+
+        if (target) {
+
+          target.scrollIntoView({
             behavior: "smooth"
           });
+
+        }
 
       });
 
@@ -962,5 +1283,7 @@
 
   </script>
 
+
 </body>
+
 </html>
